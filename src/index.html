@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="description" content="content">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- bower:css -->
+  <!-- endbower -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <!-- endinject -->
+</head>
+<body ng-controller="MainController as main">
+  <net-hide label="Mostrar input">
+    <input type="text" title="title"/>
+  </net-hide>
+
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <script src="/src/scripts/app.js"></script>
+  <script src="/src/scripts/hide.js"></script>
+  <!-- endinject -->
+</body>
+</html>

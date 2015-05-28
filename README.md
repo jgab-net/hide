@@ -1,0 +1,1 @@
+Angular hide component directive
