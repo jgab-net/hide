@@ -1,5 +1,5 @@
 {
-  "name": "hide",
+  "name": "netHide",
   "version": "0.0.0",
   "description": "angular hide component directive",
   "main": "gulpfile.js",
