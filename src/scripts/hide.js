@@ -1,10 +1,8 @@
 'use strict';
 
-/** @namespace scope.awesome */
-
 angular
-  .module('netComponents', [])
-  .directive('netHide', function ($timeout) {
+  .module('netHide', [])
+  .directive('netHide', function () {
     return {
       restrict: 'E',
       replace: true, //DEPECRATED

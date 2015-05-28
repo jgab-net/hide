@@ -71,7 +71,7 @@ gulp.task('build', ['mv'], function () {
 			gulp.src('./src/scripts/hide.js'),
 			gulp.src('./src/views/**/*.html')
 				.pipe(templateCache({
-					module: 'hide',
+					module: 'netHide',
 					root: 'views'
 				}))
 		)
