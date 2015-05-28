@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('demo', ['netComponents'])
+  .module('demo', ['netHide'])
   .controller('MainController', function ($scope) {
 
 
