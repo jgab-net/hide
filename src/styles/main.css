@@ -4849,3 +4849,14 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.net-hide .hide-label {
+  cursor: pointer; }
+.net-hide .hide-component {
+  position: relative;
+  display: inline-block; }
+  .net-hide .hide-component .hide-cancel {
+    cursor: pointer;
+    position: absolute;
+    right: -20px;
+    top: 15%; }

@@ -16,8 +16,13 @@ angular
         var $component = element.find('.hide-component');
 
         scope.showInput = function () {
-          $component.toggleClass('hidden');
+          $component.removeClass('hidden');
           $label.addClass('hidden');
+        };
+
+        scope.hideInput = function () {
+          $component.addClass('hidden');
+          $label.removeClass('hidden');
         };
       }
     };

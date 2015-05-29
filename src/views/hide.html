@@ -1,4 +1,7 @@
 <div class="net-hide">
   <a class="hide-label" ng-click="showInput()">{{ label }}</a>
-  <div class="hide-component hidden" ng-transclude></div>
+  <div class="hide-component hidden">
+    <div ng-transclude></div>
+    <div class="hide-cancel" ng-click="hideInput()"><i class="glyphicon glyphicon-remove-sign"></i></div>
+  </div>
 </div>
