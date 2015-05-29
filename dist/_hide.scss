@@ -1,0 +1,17 @@
+.net-hide {
+  .hide-label {
+    cursor:pointer;
+  }
+
+  .hide-component {
+    position: relative;
+    display: inline-block;
+    .hide-cancel {
+      cursor: pointer;
+      position: absolute;
+      right: -20px;
+      top: 15%
+    }
+  }
+}
+
