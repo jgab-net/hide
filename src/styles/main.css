@@ -4855,8 +4855,10 @@ button.close {
 .net-hide .hide-component {
   position: relative;
   display: inline-block; }
+  .net-hide .hide-component > div > * {
+    width: 90%; }
   .net-hide .hide-component .hide-cancel {
     cursor: pointer;
     position: absolute;
-    right: -20px;
+    right: 0;
     top: 15%; }
