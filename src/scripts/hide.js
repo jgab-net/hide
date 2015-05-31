@@ -4,26 +4,35 @@ angular
   .module('netHide', [])
   .directive('netHide', function () {
     return {
-      restrict: 'E',
-      replace: true, //DEPECRATED
-      templateUrl: 'views/hide.html',
-      transclude: true,
+      restrict: 'A',
       scope: {
-        label:'@'
+        netHide: '@'
       },
       link: function (scope, element) {
-        var $label = element.find('.hide-label');
-        var $component = element.find('.hide-component');
+        scope.netHide = scope.netHide || 'form-control';
 
-        scope.showInput = function () {
+        element.addClass('net-hide');
+
+        var $label = element.find('label');
+        var $component = element.find('.'+scope.netHide);
+        var $cancel = angular.element('<i/>',{class: 'hide-cancel glyphicon glyphicon-remove-sign hidden'});
+
+        element.append($cancel);
+
+        $label.removeClass('sr-only');
+        $component.addClass('hidden');
+
+        $label.on('click', function () {
           $component.removeClass('hidden');
           $label.addClass('hidden');
-        };
+          $cancel.removeClass('hidden');
+        });
 
-        scope.hideInput = function () {
+        $cancel.on('click', function () {
           $component.addClass('hidden');
           $label.removeClass('hidden');
-        };
+          $cancel.addClass('hidden');
+        });
       }
     };
   });

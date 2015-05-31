@@ -15,9 +15,10 @@
   <!-- endinject -->
 </head>
 <body ng-controller="MainController as main">
-  <net-hide label="Mostrar input">
-    <input type="text" title="title"/>
-  </net-hide>
+  <div class="form-group" net-hide="form-control">
+    <label for="input" class="sr-only">Title</label>
+    <input type="text" id="input" class="form-control"/>
+  </div>
 
   <!-- bower:js -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>

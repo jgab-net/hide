@@ -4850,15 +4850,11 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.net-hide .hide-label {
-  cursor: pointer; }
-.net-hide .hide-component {
+.net-hide {
   position: relative;
-  display: inline-block; }
-  .net-hide .hide-component > div > * {
-    width: 90%; }
-  .net-hide .hide-component .hide-cancel {
+  width: 90%; }
+  .net-hide .hide-cancel {
     cursor: pointer;
     position: absolute;
-    right: 0;
-    top: 15%; }
+    right: -20px;
+    top: 25%; }
