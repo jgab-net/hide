@@ -4861,3 +4861,10 @@ button.close {
     position: absolute;
     top: 25%;
     right: 0; }
+  .net-hide.hide-adjust {
+    display: inline-block;
+    width: auto; }
+    .net-hide.hide-adjust .hide-component {
+      width: auto; }
+    .net-hide.hide-adjust .hide-cancel {
+      right: -20px; }

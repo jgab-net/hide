@@ -10,7 +10,7 @@ angular
       replace: true, // DEPRECATED
       scope: {
         label: '@',
-        adjust: '='
+        adjust: '=?'
       },
       link: function (scope, element, attr, controller, transclude) {
         scope.adjust = scope.adjust || false;
