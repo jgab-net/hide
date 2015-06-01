@@ -1,17 +1,12 @@
 .net-hide {
-  .hide-label {
-    cursor:pointer;
-  }
+  position: relative;
+  width: 90%;
 
-  .hide-component {
-    position: relative;
-    display: inline-block;
-    .hide-cancel {
-      cursor: pointer;
-      position: absolute;
-      right: -20px;
-      top: 15%
-    }
+  .hide-cancel {
+    cursor: pointer;
+    position: absolute;
+    right: -20px;
+    top: 25%
   }
 }
 
