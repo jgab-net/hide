@@ -21,6 +21,10 @@ angular
 
         element.find('.to-transclude').replaceWith(transclude());
 
+        scope.$on('net-hide:clear', function () {
+          scope.hideInput();
+        });
+
         scope.showInput = function () {
           $component.removeClass('hidden');
           $label.addClass('hidden');
