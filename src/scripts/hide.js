@@ -4,35 +4,32 @@ angular
   .module('netHide', [])
   .directive('netHide', function () {
     return {
-      restrict: 'A',
+      restrict: 'E',
+      templateUrl: 'views/hide.html',
+      transclude: true,
+      replace: true, // DEPRECATED
       scope: {
-        netHide: '@'
+        label: '@'
       },
-      link: function (scope, element) {
-        scope.netHide = scope.netHide || 'form-control';
+      link: function (scope, element, attr, controller, transclude) {
 
-        element.addClass('net-hide');
+        var $label = element.find('.hide-label');
+        var $component = element.find('.hide-component');
+        var $cancel = element.find('.hide-cancel');
 
-        var $label = element.find('label');
-        var $component = element.find('.'+scope.netHide);
-        var $cancel = angular.element('<i/>',{class: 'hide-cancel glyphicon glyphicon-remove-sign hidden'});
+        element.find('.to-transclude').replaceWith(transclude());
 
-        element.append($cancel);
-
-        $label.removeClass('sr-only');
-        $component.addClass('hidden');
-
-        $label.on('click', function () {
+        scope.showInput = function () {
           $component.removeClass('hidden');
           $label.addClass('hidden');
           $cancel.removeClass('hidden');
-        });
+        };
 
-        $cancel.on('click', function () {
+        scope.hideInput = function () {
           $component.addClass('hidden');
           $label.removeClass('hidden');
           $cancel.addClass('hidden');
-        });
+        };
       }
     };
   });

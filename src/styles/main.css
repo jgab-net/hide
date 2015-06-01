@@ -4851,10 +4851,13 @@ button.close {
     display: none !important; } }
 
 .net-hide {
-  position: relative;
-  width: 90%; }
+  width: 100%;
+  position: relative; }
+  .net-hide .hide-label {
+    cursor: pointer; }
+  .net-hide .hide-component {
+    width: 96%; }
   .net-hide .hide-cancel {
-    cursor: pointer;
     position: absolute;
-    right: -20px;
-    top: 25%; }
+    top: 25%;
+    right: 0; }

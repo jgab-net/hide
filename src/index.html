@@ -15,9 +15,11 @@
   <!-- endinject -->
 </head>
 <body ng-controller="MainController as main">
-  <div class="form-group" net-hide="form-control">
+  <div class="form-group">
     <label for="input" class="sr-only">Title</label>
-    <input type="text" id="input" class="form-control"/>
+    <net-hide label="Title">
+      <input type="text" id="input" class="form-control"/>
+    </net-hide>
   </div>
 
   <!-- bower:js -->
