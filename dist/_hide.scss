@@ -15,5 +15,18 @@
     top: 25%;
     right: 0;
   }
+
+  &.hide-adjust {
+    display: inline-block;
+    width: auto;
+
+    .hide-component {
+      width: auto;
+    }
+
+    .hide-cancel {
+      right: -20px;
+    }
+  }
 }
 

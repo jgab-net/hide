@@ -9,9 +9,11 @@ angular
       transclude: true,
       replace: true, // DEPRECATED
       scope: {
-        label: '@'
+        label: '@',
+        adjust: '='
       },
       link: function (scope, element, attr, controller, transclude) {
+        scope.adjust = scope.adjust || false;
 
         var $label = element.find('.hide-label');
         var $component = element.find('.hide-component');
@@ -30,6 +32,13 @@ angular
           $label.removeClass('hidden');
           $cancel.addClass('hidden');
         };
+
+        if (scope.adjust) {
+          element.addClass('hide-adjust');
+        } else {
+          element.removeClass('hide-adjust');
+        }
+
       }
     };
   });
